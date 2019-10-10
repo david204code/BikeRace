@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   
   root 'page#home'
 
-  get 'page/home'
-  get 'page/photo'
-  get 'page/location'
+  get '/home', to: 'page#home'
+  get '/photo', to: 'page#photo'
+  get '/location', to: 'page#location'
 
   resources :contests
   resources :riders
