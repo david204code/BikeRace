@@ -3,28 +3,106 @@
     color:red;
   }
 
+  .view{
+    height: 450px;
+    width: 1100px;
+  }
+
+   .home-head{
+    text-align: right;
+  }
+
+  .home-title{
+    text-align: center;
+  } 
 
 </style>
 
 
-<div class="container">  
-  
-  <div class="row float-right">
-    <div class="shadow">
+<div class="">  
+  <div class="home-head">
       <h3 class="">An exciting, prestigious and inspiring bike</h3>
       <h3 class="">At the foot of the Rocky mountain, Colorado</h3>
-    </div>
   </div>
-  
-  <div class="row col-md-12 text-center shadow">
+
+  <div class="home-title">
     <div class="col-md-12">
       <h1 class="display-2">Boulder Bike Tour</h1>
     </div>
   </div> 
-
 </div>
 
-<div class="container">
 
 
-</div>
+  <!--Carousel Wrapper-->
+<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
+    <!--Indicators-->
+    <!-- <ol class="carousel-indicators">
+      <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-2" data-slide-to="1"></li>
+      <li data-target="#carousel-example-2" data-slide-to="2"></li>
+    </ol> -->
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <div class="view">
+          <%= image_tag ("bg1.jpg")%>
+          <div class="mask rgba-black-light"></div>
+        </div>
+        <div class="carousel-caption">
+          <h3 class="h3-responsive">Light mask</h3>
+          <p>First text</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <!--Mask color-->
+        <div class="view">
+          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+            alt="Second slide">
+          <div class="mask rgba-black-strong"></div>
+        </div>
+        <div class="carousel-caption">
+          <h3 class="h3-responsive">Strong mask</h3>
+          <p>Secondary text</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <!--Mask color-->
+        <div class="view">
+          <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+            alt="Third slide">
+          <div class="mask rgba-black-slight"></div>
+        </div>
+        <div class="carousel-caption">
+          <h3 class="h3-responsive">Slight mask</h3>
+          <p>Third text</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+          <!--Mask color-->
+          <div class="view">
+            <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+              alt="Second slide">
+            <div class="mask rgba-black-strong"></div>
+          </div>
+          <div class="carousel-caption">
+            <h3 class="h3-responsive">Strong mask</h3>
+            <p>Secondary text</p>
+          </div>
+        </div>
+    </div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+  </div>
+  <!--/.Carousel Wrapper-->
+
