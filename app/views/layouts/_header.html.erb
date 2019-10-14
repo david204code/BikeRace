@@ -21,17 +21,17 @@
     }
 
     .logo {
-      
+      /* margin-left: -125px; */
     }
     
 </style>
   
   
   <nav>    
-    <ul class="header">      
-      <a class="logo">
-          <%= link_to (image_tag "bike-icon.png", style:"height:100px"), home_path%>
-      </a>
+    <ul class="header text-center">      
+      <li class="logo">
+          <%= link_to (image_tag "bike-icon.png", style:"height:100px", class:"logo"), home_path%>
+      </li>
       <li>
         <%= link_to "Home", home_path %>
       </li>
