@@ -1,12 +1,16 @@
 <style>
   #map {
-    height: 650px; }
+    height: 640px; }
   }
   
 </style>
 
-<h1>Hi from the location.html.erb</h1>
-<h2>My Map</h2>
+<div class="text-center">
+  <h1>Keep track of the riders!</h1>
+  <p>Supporting a particualar rider? Stay out to date with the race on the map below.
+    This is a new features that we've introduce since the last bike race, almost 10 years ago!
+  </p>
+</div>
 
 <div id = "map"> </div>
 
@@ -14,7 +18,7 @@
 
   var mymap = L.map('map', {
     center: [40.00, -105.35],
-    zoom: 15
+    zoom: 14
   });
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
