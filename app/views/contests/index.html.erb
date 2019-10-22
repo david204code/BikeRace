@@ -1,6 +1,6 @@
 <style>
       .contest {
-        background-color: green;
+        /* background-color: green; */
         text-align: center;
       }
 
@@ -12,19 +12,19 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Contests</h1>
-
-<p class="enter">
-  <%= link_to "Click here to enter!", new_contest_path %>
-</p>
 
 <div class="col-md-12 contest">
+  <h1>Contests</h1>
+  
   <h1 class="display-2">Page#contest</h1>
   <h1 class="display-1">Display 1</h1>
   <p>Find me in app/views/page/contest.html.erb</p>
+  <p class="enter">
+    <%= link_to "Click here to enter!", new_contest_path %>
+  </p>
 </div>
 
-<table>
+<!-- <table>
   <thead>
     <tr>
       <th colspan="3"></th>
@@ -40,8 +40,8 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
 <br>
 
-<%= link_to 'New Contest', new_contest_path %>
+<!-- <%= link_to 'New Contest', new_contest_path %> -->
