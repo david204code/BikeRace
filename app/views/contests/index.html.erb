@@ -5,8 +5,32 @@
       }
 
       .enter a {
-        background-color: green;
+        background-color: rgba(156, 156, 156, 0.137);
+        color: black;
       }
+
+      .contest-image {
+        height: 600px;
+        width: 850px;
+      }
+
+      .contest-h1 {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(156, 156, 156, 0.137);
+      }
+
+      .writing {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(8, 8, 8, 0.61);
+        color: rgba(255, 255, 255, 0.897);
+      }
+      
 </style>
 
 
@@ -14,11 +38,21 @@
 
 
 <div class="col-md-12 contest">
-  <h1>Contests</h1>
+  <h1 class="display-2">Get involved!</h1>
+
+  <div class="container">
+    <%= image_tag ("bg1.jpg"), class:"contest-image"%>
+    <div class="contest-h1">
+      <h1 class="display-2">Contests</h1>
+    </div>
+  </div>
   
-  <h1 class="display-2">Page#contest</h1>
-  <h1 class="display-1">Display 1</h1>
-  <p>Find me in app/views/page/contest.html.erb</p>
+  <p class="writing">
+    This year we are sponsoring YOU to come up with a slogan for this historic once in a 
+    decade bike race. Your suggested slogan must be under 50 characters, so make it short 
+    and snappy. Please submit your name, firstname and email address. The winner will be 
+    announce in the run up to the event!  
+  </p>
   <p class="enter">
     <%= link_to "Click here to enter!", new_contest_path %>
   </p>
