@@ -10,7 +10,7 @@ if (divImages) {
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${ApiKey}&tags=bikerace%2CBoulderBikeTour&per_page=40&page=${pageCount}&format=json&nojsoncallback=1`,
+      "url": `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${ApiKey}&tags=%23bikeraces%2CBoulderBikeTour&per_page=40&page=${pageCount}&format=json&nojsoncallback=1`,
       "method": "GET",
       "headers": {}
     }
@@ -34,7 +34,7 @@ if (divImages) {
     var scrollPercentage = (scrollTop / bodyHeight);
     var pageCount = 2;
     // if the scroll is more than 90% from the top, load more content.
-    if(scrollPercentage > 0.6) {
+    if(scrollPercentage > 0.98) {
       // Load content
       getPhotos(pageCount++);
       
