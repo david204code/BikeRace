@@ -1,3 +1,15 @@
+<style>
+  .ridersText{
+    color: darkred;
+  }
+
+  .table{
+    color: darkred;
+  }
+
+</style>
+
+
 <p id="notice"><%= notice %></p>
 
 <!-- <h1>Riders</h1> -->
@@ -25,35 +37,38 @@
   </tbody>
 </table> -->
 
-<h1 class="text-center">
-  Riders
-</h1>
+<div class ="ridersText">
 
-<div class="shadow col-md-10 mx-auto text-center">
-  <table class="table">
-    <thead class>
-      <tr>
-        <th class="col-md-2">First Name</th>
-        <th class="col-md-2">Second Name</th>
-        <th class="col-md-2">City of Origin</th>        
-      </tr>
-    </thead>
+  <h1 class="text-center">
+    Riders
+  </h1>
 
-    <tbody>
-      
-      <% @riders.each do |rider| %>
-        <tr class="" >
-            <td><%= rider.firstname %></td>
-            <td><%= rider.lastname %></td>
-            <td><%= rider.city_of_origin %></td>
-            <!-- <td><%= link_to 'Show', rider %></td> -->
+  <div class="shadow col-md-10 mx-auto text-center">
+    <table class="table">
+      <thead class>
+        <tr>
+          <th class="col-md-2">First Name</th>
+          <th class="col-md-2">Second Name</th>
+          <th class="col-md-2">City of Origin</th>        
         </tr>
-      <% end %>
-    </tbody>
+      </thead>
 
-    
-  </table>
+      <tbody>
+        
+        <% @riders.each do |rider| %>
+          <tr class="" >
+              <td><%= rider.firstname %></td>
+              <td><%= rider.lastname %></td>
+              <td><%= rider.city_of_origin %></td>
+              <!-- <td><%= link_to 'Show', rider %></td> -->
+          </tr>
+        <% end %>
+      </tbody>
 
+      
+    </table>
+
+  </div>
 </div>
 
 
