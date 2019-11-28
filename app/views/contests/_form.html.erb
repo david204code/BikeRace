@@ -1,3 +1,10 @@
+<style>
+  .formPicture{
+    padding:0;
+    width: 485px;
+  }
+</style>
+
 <%= form_with(model: contest, local: true) do |form| %>
   <% if contest.errors.any? %>
     <div id="error_explanation">
@@ -71,8 +78,9 @@
     
   </div>
 
-  <div class="col-md-4">
-
+  <div class="col-md-4 formPicture">
+    <%= image_tag ("contest1.jpg"), class:"formPicture"%>
+    <%= image_tag ("contest2.jpg"), class:"formPicture"%>
   </div>
 
 </div>
