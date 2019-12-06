@@ -19,15 +19,18 @@
 <div id = "map"> </div>
 
 <script>  
+  var riderLocation {}
 
   var mymap = L.map('map', {
     center: [40.00, -105.35],
-    zoom: 14
+    zoom: 12
   });
 
-  var littleton = L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.');
-  var cities = L.layerGroup([littleton]);
-  var marker = L.marker([40.00, -105.35]).addTo(mymap);
+  // var littleton = L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.');
+  // var cities = L.layerGroup([littleton]);
+  var marker = L.marker([40.00, -105.35]).addTo(mymap).bindPopup('This is Littleton, CO.');
+  var marker = L.marker([39.95, -105.24]).addTo(mymap).bindPopup('This');
+  var marker = L.marker([40.06, -105.26]).addTo(mymap);
 
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
