@@ -20,9 +20,9 @@
 
 <script>  
 
-    var mymap = L.map('map', {
-    center: [40.00, -105.35],
-    zoom: 12
+  var mymap = L.map('map', {
+  center: [40.01, -105.29],
+  zoom: 12
   });
 
   fetch('./riders.json')
@@ -33,11 +33,28 @@
             response.status);
           return;
         }
-        
-        response.json().then(function (riders) {
-          var marker = L.marker([riders[0].latitude, riders[0].longitude]).addTo(mymap).bindPopup(riders[0].firstname);
-          console.log(riders);
+
+          response.json().then(function (riders) {
+           
+            for(let rider of riders){
+              var marker = L.marker([rider.latitude, rider.longitude]).addTo(mymap).bindPopup(rider.firstname + " " + rider.lastname);
+              console.log(rider.latitude, rider.longitude, rider.firstname, rider.lastname);
+            }
+            // for (i = 0; i < riders.length; i++) {
+            //   console.log(riders);
+            // }
+            // console.log(riders);
+            // console.log(riders.length);
+            // console.log(riders[0].latitude, riders[0].longitude);
+
+
         });
+
+               
+        // response.json().then(function (riders) {
+        //   var marker = L.marker([riders[0].latitude, riders[0].longitude]).addTo(mymap).bindPopup(riders[0].firstname);
+        //   console.log(riders);
+        // });
       }
     )
     .catch(function (err) {
