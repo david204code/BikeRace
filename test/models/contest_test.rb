@@ -32,4 +32,25 @@ class ContestTest < ActiveSupport::TestCase
     assert_not @contest.valid?
   end
 
+  test "length of firstname" do 
+    @contest.firstname = "a" * 21
+    assert_not @contest.valid?
+  end
+
+  test "length of lastname" do 
+    @contest.lastname = "a" * 31
+    assert_not @contest.valid?
+  end
+  
+  test "length of email" do 
+    @contest.email = "a" * 256 + "@example.com"
+    assert_not @contest.valid?
+  end
+  
+  test "length of slogan" do 
+    @contest.slogan = "a" * 51
+    assert_not @contest.valid?
+  end
+
+
 end
