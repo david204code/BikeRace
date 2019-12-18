@@ -17,7 +17,8 @@ class ContestsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create contest" do
     assert_difference('Contest.count') do
-      post contests_url, params: { contest: {  } }
+      post contests_url, params: { contest: { firstname: @contest.firstname,
+      lastname: @contest.lastname, email: @contest.email, slogan: @contest.slogan  } }
     end
 
     assert_redirected_to contest_url(Contest.last)
