@@ -3,11 +3,11 @@
 one:
   firstname: MyString
   lastname: MyString
-  email: MyString
+  email: MyString@example.com
   slogan: MyString
 
 two:
-  firstname: MyString
-  lastname: MyString
-  email: MyString
-  slogan: MyString
+  firstname: MyString1
+  lastname: MyString1
+  email: MyString1@example.com
+  slogan: MyString1
