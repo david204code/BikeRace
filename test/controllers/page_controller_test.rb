@@ -6,4 +6,14 @@ class PageControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get photo" do 
+    get photo_path
+    assert_response :success
+  end
+
+  test "should get location" do
+    get location_path
+    assert_response :success
+  end
+
 end
