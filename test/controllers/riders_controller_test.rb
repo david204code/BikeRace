@@ -3,11 +3,13 @@ require 'test_helper'
 class RidersControllerTest < ActionDispatch::IntegrationTest
   setup do
     @rider = riders(:one)
+    @full_title = "Boulder Bike Tour"
   end
 
   test "should get index" do
     get riders_url
     assert_response :success
+    assert_select "title", "Riders - #{@full_title}"
   end
 
   test "should get new" do
