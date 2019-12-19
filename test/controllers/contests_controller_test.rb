@@ -15,6 +15,7 @@ class ContestsControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
     get new_contest_url
     assert_response :success
+    assert_select "title", "Submit Your Slogan - #{@full_title}"
   end
 
   test "should create contest" do
