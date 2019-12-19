@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/home', to: 'page#home'
   get '/photo', to: 'page#photo'
   get '/location', to: 'page#location'
+  get 'contests/view'
 
   resources :contests
   resources :riders
