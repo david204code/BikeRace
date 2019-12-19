@@ -26,9 +26,9 @@
 
 <div class="row">
 
-  <div class="col-md-8 card">
+  <div class="col-md-8 card text-center">
 
-    <div class="text-center">
+    <div class="">
       <br>
       <h1 class="">
         Submit Your Slogan
@@ -38,7 +38,7 @@
       </p>
     </div>
 
-    <div class="row form-group text-center"> 
+    <div class="row form-group"> 
 
       <div class="col-md-6">
         <%= form.label :firstname %>
@@ -55,7 +55,7 @@
 
     <div class="row offset-1" id="email">
 
-      <div class="col-md-10 form-group text-center">
+      <div class="col-md-10 form-group">
         <%= form.label :email %>
         <%= form.text_field :email, placeholder:"email address", class: "form-control"%> 
         <br>
@@ -65,7 +65,7 @@
 
     <!-- <div class="row offset-1" id="email1">
 
-      <div class="col-md-10 form-group text-center">
+      <div class="col-md-10 form-group">
         <%= form.label :"confirm email" %>
         <%= form.text_field :email, placeholder:"email address", class: "form-control"%> 
       </div>
@@ -74,18 +74,18 @@
 
     <div class="row offset-1 form-group">
 
-      <div class="col-md-10 text-center">
+      <div class="col-md-10">
         <%= form.label :slogan %>
         <%= form.text_area :slogan, placeholder:"Enter your slogan here!", class:"form-control", rows:"4" %>
       </div>
       
     </div>
 
-    <div class="actions text-center form-group">
+    <div class="actions form-group">
       <%= form.submit "Submit"%>
     </div>
     
-    <h1 class="text-center">Good Luck!</h1>
+    <h1 class="">Good Luck!</h1>
 
   </div>
 
