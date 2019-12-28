@@ -69,3 +69,34 @@
     background-color: #D5DBDB;
     color: darkred;
   }
+
+  ul {
+    text-align: center;
+  }
+
+  li {
+    display: inline;
+    padding: 40px;
+    margin: 10px;
+  }
+
+  .header, a {
+    font-size: 2.0rem;
+    font-weight: 300;
+    background-color: black;
+    color: white;
+  }
+  
+  .countdownText {
+    text-align: center;
+    color: darkred;
+  }
+
+  #countdown {
+    background-color: #C6CBCF;
+  }
+
+  footer {
+    background-color: black;
+    color: white;
+  }
