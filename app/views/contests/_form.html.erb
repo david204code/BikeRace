@@ -1,27 +1,15 @@
-<style>
-  .formPicture{
-    padding:0;
-    width: 485px;
-  }
+<%= form_with(model: contest, local: true) do |form| %>
+<% if contest.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(contest.errors.count, "error") %> prohibited this contest from being saved:</h2>
 
-  #error_explanation {
-    color: darkred;
-  }
-</style>
-
-
-  <%= form_with(model: contest, local: true) do |form| %>
-    <% if contest.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(contest.errors.count, "error") %> prohibited this contest from being saved:</h2>
-  
-        <ul>
-        <% contest.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
+    <ul>
+    <% contest.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
     <% end %>
+    </ul>
+  </div>
+<% end %>
 
 
 <div class="row">
