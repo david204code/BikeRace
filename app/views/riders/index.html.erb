@@ -1,43 +1,7 @@
-<style>
-  .ridersText{
-    color: darkred;
-  }
-
-  .table{
-    color: darkred;
-  }
-
-</style>
 
 <% provide(:title, "Riders") %>
 
-
 <p id="notice"><%= notice %></p>
-
-<!-- <h1>Riders</h1> -->
-
-<!-- <table>
-  <thead>
-    <tr>
-      <th class="col-md-3">Rider's firstname</th>
-      <th class="col-md-3">Rider's lastname</th>
-      <th class="col-md-3">City of Origin</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @riders.each do |rider| %>
-      <tr>
-          <td><p><%= rider.firstname %></p></td>
-          <td><p><%= rider.lastname %></p></td>
-          <td><p><%= rider.city_of_origin %></p></td>
-          <td><%= link_to 'Show', rider %></td>
-          <td><%= link_to 'Edit', edit_rider_path(rider) %></td>
-          <td><%= button_to 'Destroy', rider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> -->
 
 <div class ="ridersText">
 
@@ -72,8 +36,6 @@
 
   </div>
 </div>
-
-
 
 <br>
 
