@@ -25,47 +25,18 @@
             response.status);
           return;
         }
-
           response.json().then(function (riders) {
            
             for(let rider of riders){
               var marker = L.marker([rider.latitude, rider.longitude]).addTo(mymap).bindPopup(rider.firstname + " " + rider.lastname);
               console.log(rider.latitude, rider.longitude, rider.firstname, rider.lastname);
             }
-            // for (i = 0; i < riders.length; i++) {
-            //   console.log(riders);
-            // }
-            // console.log(riders);
-            // console.log(riders.length);
-            // console.log(riders[0].latitude, riders[0].longitude);
-
-
         });
-
-               
-        // response.json().then(function (riders) {
-        //   var marker = L.marker([riders[0].latitude, riders[0].longitude]).addTo(mymap).bindPopup(riders[0].firstname);
-        //   console.log(riders);
-        // });
       }
     )
     .catch(function (err) {
       console.log('Fetch Error :-S', err);
     });
-
-
-
-  // var mymap = L.map('map', {
-  //   center: [40.00, -105.35],
-  //   zoom: 12
-  // });
-
-  // var littleton = L.marker([39.61, -105.02]).bindPopup('This is Littleton, CO.');
-  // var cities = L.layerGroup([littleton]);
-  // var marker = L.marker([40.00, -105.35]).addTo(mymap).bindPopup('This is Littleton, CO.');
-  // var marker = L.marker([39.95, -105.24]).addTo(mymap).bindPopup('This');
-  // var marker = L.marker([40.06, -105.26]).addTo(mymap);
-
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 	// attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -73,6 +44,5 @@
 	id: 'mapbox.streets',
 	accessToken: 'pk.eyJ1IjoiZGF2aWRjb2RlMjA0IiwiYSI6ImNrMjB4YWIwZzE5aXMzb3F0dDA0cHRnY2UifQ.hesfI3n-LU2fxYa-TWVOkQ'
 }).addTo(mymap);
-
 
 </script>
