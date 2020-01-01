@@ -21,8 +21,9 @@
  }
 
  body {
-   background-image: url("bg1.jpg");
-    min-height: 500px;
+  //  background-image: url("bg1.jpg");
+  //   min-height: 500px;
+    background-color: #D5DBDB;
   }
 
   .formPicture{
@@ -48,6 +49,55 @@
     height: 600px;
     width: 850px;
   }
+
+  .mobileWriting {
+    display: none;
+  }
+  
+  .mobileEnter {
+    display: none;
+  }
+
+@media only screen and (max-width: 450px) {
+  .contest h1{
+    font-size: 40px;
+  }
+
+  .contest-image {
+    height: auto;
+    width: 100%;
+  }
+
+  .contest-h1 {
+    display: none;
+  }
+
+  .writing {
+    display: none; 
+  }
+
+  .enter {
+    display: none;
+  }
+
+  .mobileWriting {
+  display: flex;
+  padding: 20px;
+}
+
+  .mobileEnter {
+    display: flex;
+    background-color: #D5DBDB;
+    color: darkred;
+  }
+
+  .mobileEnter a {
+    display: flex;
+    background-color: #D5DBDB;
+    color: darkred;
+    margin-top: -25px;
+  }
+}
 
   .contest-h1 {
     position: absolute;
@@ -80,12 +130,12 @@
     margin: 10px;
   }
 
-  .header, a {
-    font-size: 2.0rem;
-    font-weight: 300;
-    background-color: black;
-    color: white;
-  }
+  // .header, a {
+  //   font-size: 2.0rem;
+  //   font-weight: 300;
+  //   background-color: black;
+  //   color: white;
+  // }
   
   .countdownText {
     text-align: center;
@@ -93,7 +143,8 @@
   }
 
   #countdown {
-    background-color: #C6CBCF;
+    background-color: #D5DBDB;
+    padding-left: 6px;
   }
 
   footer {

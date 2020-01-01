@@ -29,30 +29,69 @@
     }, 1000);
 </script>
 
-<nav>    
-  <ul class="header text-center">      
-    <li class="logo">
-        <%= link_to (image_tag "bike-icon.png", style:"height:100px", class:"logo"), home_path%>
-    </li>
-    <li>
-      <%= link_to "Home", home_path %>
-    </li>
-    <li>
-      <%= link_to "Photo", photo_path %>
-    </li>
-    <li>
-      <%= link_to "Location", location_path %> 
-    </li>
-    <li>
-      <%= link_to "Riders", riders_path %>
-    </li>
-    <li>
-      <%= link_to "Contest", contests_path %>
-    </li>
-  </ul>
+<style>
+ .header, a {
+    font-size: 2.0rem;
+    font-weight: 300;
+    background-color: black;
+    color: white;
+    padding-right: 20px;
+    padding-left: 20px;
+
+  }
+</style>
+
+<!-- <nav class="header">
+  <div class="col-md-12 col-sm-2"> 
+    <ul class="">
+      <li>
+        <%= link_to (image_tag "bike-icon.png", style:"height:100px", class:"logo"), home_path %>
+      </li>
+      <li>
+        <%= link_to 'Home', home_path %>
+      </li>
+      <li>
+        <%= link_to 'Photo', photo_path %>
+      </li>
+      <li>
+        <%= link_to 'Location', location_path %> 
+      </li>
+      <li>
+        <%= link_to 'Riders', riders_path %>
+      </li>
+      <li>
+        <%= link_to 'Contest', contests_path %>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+
+<nav class="header">
+  <div class="col-md-12 col-sm-2"> 
+    <ul class="">
+      <!-- <li> -->
+        <%= link_to (image_tag "bike-icon.png", style:"height:100px", class:"logo"), home_path %>
+      <!-- </li> -->
+      <!-- <li> -->
+        <%= link_to 'Home', home_path %>
+      <!-- </li>
+      <li> -->
+        <%= link_to 'Photo', photo_path %>
+      <!-- </li>
+      <li> -->
+        <%= link_to 'Location', location_path %> 
+      <!-- </li>
+      <li> -->
+        <%= link_to 'Riders', riders_path %>
+      <!-- </li>
+      <li> -->
+        <%= link_to 'Contest', contests_path %>
+      <!-- </li> -->
+    </ul>
+  </div>
 </nav>
 
 <div>
-  <h5 class="countdownText font-weight-light">Race Starts In <a id="countdown"></a></h5>
+  <h5 class="countdownText font-weight-light">Race Starts In<a id="countdown"></a></h5>
 </div>
   
