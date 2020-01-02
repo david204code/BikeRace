@@ -26,22 +26,24 @@ if (divImages) {
         
     }))
   } 
-
+  
+    var pageCount = 0;
   window.addEventListener('scroll', function() {
+    console.log("David");
     var scrollTop = $(document).scrollTop();
     var windowHeight = $(window).height();
     var bodyHeight = $(document).height() - windowHeight;
     var scrollPercentage = (scrollTop / bodyHeight);
-    var pageCount = 2;
     // if the scroll is more than 90% from the top, load more content.
-    if(scrollPercentage > 0.98) {
+    if(scrollPercentage > 0.98 && pageCount <= 2) {
       // Load content
       getPhotos(pageCount++);
+      console.log(pageCount);
       
     }
 
   })
-  getPhotos(1);
+  getPhotos(pageCount);
 
 }
 }) 
