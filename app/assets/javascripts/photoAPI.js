@@ -5,12 +5,12 @@ document.addEventListener("turbolinks:load", function() {
   let divImages = document.getElementById('demo');
 
   if (divImages) {
-  function getPhotos(pageCount){
+  function getPhotos(){
 
     var settings = {
       "async": true,
       "crossDomain": true,
-      "url": `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${ApiKey}&tags=%23bikeraces%2CBoulderBikeTour&per_page=11&page=${pageCount}&format=json&nojsoncallback=1`,
+      "url": `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${ApiKey}&tags=%23bikeraces%2CBoulderBikeTour&per_page=40&page=${pageCount}&format=json&nojsoncallback=1`,
       "method": "GET",
       "headers": {}
     }
@@ -30,12 +30,12 @@ document.addEventListener("turbolinks:load", function() {
     var pageCount = 0;
     window.addEventListener('scroll', function() {
       // console.log("David");
-      var scrollTop = $(document).scrollTop();
-      var windowHeight = $(window).height();
-      var bodyHeight = $(document).height() - windowHeight;
-      var scrollPercentage = (scrollTop / bodyHeight);
+      // var scrollTop = $(document).scrollTop();
+      // var windowHeight = $(window).height();
+      // var bodyHeight = $(document).height() - windowHeight;
+      // var scrollPercentage = (scrollTop / bodyHeight);
       // if the scroll is more than 90% from the top, load more content.
-      if(scrollPercentage > 0.98 && pageCount <= 12) {
+      if(($(window).scrollTop() + $(window).height() ==$(document).height())) {
       // Load content
         getPhotos(pageCount++);
         console.log(pageCount);
